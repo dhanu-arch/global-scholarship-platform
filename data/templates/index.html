@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Global Scholarship Platform</title>
+
+</head>
+
+<body>
+
+<h1>Global Scholarship Platform</h1>
+
+<form method="post">
+
+<input
+type="text"
+name="search"
+placeholder="Search scholarships, countries or fields"
+>
+
+<button type="submit">
+Search
+</button>
+
+</form>
+
+<hr>
+
+{% for s in scholarships %}
+
+<h3>{{s.name}}</h3>
+
+<p>Country: {{s.country}}</p>
+
+<p>Field: {{s.field}}</p>
+
+<p>Level: {{s.level}}</p>
+
+<a href="{{s.link}}" target="_blank">
+Official Website
+</a>
+
+<hr>
+
+{% endfor %}
+
+</body>
+
+</html>
